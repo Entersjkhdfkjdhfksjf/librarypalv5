@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPS Library</title>
+  <script type="module" defer src="./script.js"></script>
+  <script src="https://kit.fontawesome.com/345736990a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">
+      <h1><a href="./index.html">NPS Library</a></h1>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <div class="welcome-message">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search books using title, author's name, book number">
+      </div>
+      <div class="subheader">Welcome to the NPS Library!!</div>
+
+      <div class="title">List of Books</div>
+      <div class="buttons">
+        <!-- Button to open the modal form -->
+        <button class="new-book">+ Add Book</button>
+
+        <!-- Modal form -->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+              <h2>Add New Book</h2>
+              <label for="title">Title:</label>
+              <input type="text" id="title" required />
+              <label for="schoolid">BookID:</label>
+              <input type="number" id="schoolid" required />
+              <label for="author">Author:</label>
+              <input type="text" id="author" required />
+              <label for="pages">Pages:</label>
+              <input type="number" id="pages" required />
+              <label for="image">Cover Image:</label>
+              <input type="file" id="image" accept=".jpg,.jpeg,.png" />
+              <label for="genre">Genre:</label>
+              <input type="text" id="genre" required />
+              <label for="desc">Description:</label>
+              <textarea id="desc" required></textarea>
+              <button type="submit">Add Book</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="sorting">
+          <label for="sort-dropdown">Sort by:</label>
+          <select id="sort-dropdown">
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="pages">Pages</option>
+            <option value="schoolid">BookID</option>
+            <option value="genre">Genre</option>
+            <option value="desc">Description</option>
+          </select>
+        </div>
+      </div>
+      <div class="books-container"></div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+
+<div id="loginModal" class="login-modal">
+  <div class="login-content">
+    <h2>Login to LibraryPal</h2>
+    <form id="loginForm" class="login-form">
+      <input type="text" id="username" class="login-input" placeholder="Username" required>
+      <input type="password" id="password" class="login-input" placeholder="Password" required>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
